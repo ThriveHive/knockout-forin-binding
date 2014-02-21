@@ -11,7 +11,7 @@ With an object like
 		prop3: 'Baz'
 	});
 
-You can use the forin binding to render a template, like so, using the "$key" and "$value" properties to refernce the property names and their values in the template:
+You can use the forin binding to render a template, like so, using the "$key" and "$value" properties to reference the property names and their values in the template:
 
 	<ul data-bind="forin: obj">
 		<li data-bind="text: $key + ': ' + $value"></li>
