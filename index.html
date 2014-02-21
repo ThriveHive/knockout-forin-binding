@@ -1,0 +1,31 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Knockout foreach object property binding</title>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+		<script type="text/javascript" src="knockout.forin.js"></script>
+		
+	</head>
+	<body>
+		<h1>Looping over an object's properties</h1>
+		<ul data-bind="forin: obj">
+			<li data-bind="text: $key + ': ' + $value"></li>
+		</ul>
+		<script type="text/javascript">
+			
+			var model = function(){
+				var self = this;
+				
+				this.obj = ko.observable({
+					prop1: 'Foo',
+					prop2: 'Bar',
+					prop3: 'Baz'
+				});
+			}
+			
+			var m = new model();
+			ko.applyBindings(m);
+
+		</script>
+	</body>
+</html>
