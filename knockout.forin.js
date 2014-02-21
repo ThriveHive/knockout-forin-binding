@@ -63,5 +63,5 @@
 		}
 	};
 
-    return {};
+    return ko.bindingHandlers['forin'];
 }));
